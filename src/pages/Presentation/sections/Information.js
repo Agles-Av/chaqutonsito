@@ -47,7 +47,7 @@ function Information() {
                     más cercana
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="Localiza especialistas cerca de ti en cuestión de segundos."
               />
               <RotatingCardBack
                 image={bgBack}
