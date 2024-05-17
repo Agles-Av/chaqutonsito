@@ -73,16 +73,15 @@ function DesignBlocks() {
           <MKBadge
             variant="contained"
             color="info"
-            badgeContent="Infinite combinations"
+            badgeContent="Recién agregados"
             container
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Huge collection of sections
+            Artículos nuevos
           </MKTypography>
           <MKTypography variant="body1" color="text">
-            We have created multiple options for you to put together and customise into pixel
-            perfect pages.
+            Mantente al día con las últimas investigaciones y consejos médicos.
           </MKTypography>
         </Grid>
       </Container>
