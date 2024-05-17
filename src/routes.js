@@ -66,6 +66,45 @@ const routes = [
     route: "/pages/authentication/sign-in",
     component: <SignIn />,
   },
+  {
+    name: "map",
+    route: "/pages/landing-pages/map",
+    component: <Map />,
+  },
+  {
+    name: "about us",
+    route: "/pages/landing-pages/about-us",
+    component: <AboutUs />,
+  },
+  {
+    name: "contact us",
+    route: "/pages/landing-pages/contact-us",
+    component: <ContactUs />,
+  },
+  {
+    name: "author",
+    route: "/pages/landing-pages/author",
+    component: <Author />,
+  },
+  {
+    name: "GitHub",
+    icon: <GitHubIcon />,
+    href: "https://www.github.com/creativetimofficial/material-kit-react",
+  },
+
+  {
+    name: "Sign In",
+    route: "/pages/authentication/sign-in",
+    component: <SignIn />,
+  },
+
+  {
+    name: "Map",
+    route: "/pages/landing-pages/map",
+    component: <Map />,
+  },
+
+
 ];
 
 export default routes;
