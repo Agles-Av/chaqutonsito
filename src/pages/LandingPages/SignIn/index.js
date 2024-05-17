@@ -17,7 +17,6 @@ import MKButton from "components/MKButton";
 
 // Material Kit 2 React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import SimpleFooter from "examples/Footers/SimpleFooter";
 import { gapi } from "gapi-script";
 import GoogleLogin from "react-google-login";
 // Material Kit 2 React page layout routes
@@ -36,7 +35,7 @@ function SignInBasic() {
       });
     };
     gapi.load("client:auth2", start);
-  }, []);
+  }, [clientID]);
 
   const onSuccess = (res) => {
     setUser(res.profileObj);
@@ -108,7 +107,6 @@ function SignInBasic() {
                     <MKInput type="password" label="Contraseña" fullWidth />
                   </MKBox>
                   <MKBox display="flex" alignItems="center" ml={-1}>
-                    <Switch checked={rememberMe} onChange={handleSetRememberMe} />
                     <MKTypography
                       variant="button"
                       fontWeight="regular"
