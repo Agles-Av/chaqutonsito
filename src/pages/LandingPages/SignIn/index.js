@@ -23,7 +23,7 @@ import GoogleLogin from "react-google-login";
 import routes from "routes";
 
 // Images
-import bgImage from "assets/images/SignInBAckG.jpeg";
+import bgImage from "assets/images/SignInBackJov.jpeg";
 import AxiosCliente from "config/http-gateway/axios-config";
 
 function SignInBasic() {
@@ -52,8 +52,13 @@ function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
-
-  const filteredAparteroutes = routes.filter((route) => route.route !== "/pages/SignIn/Register");
+  //Ocultar la ruta de registro, sign in y pdf-viewer
+  const filteredAparteroutes = routes.filter(
+    (route) =>
+      route.route !== "/pages/SignIn/Register/SimpleForm" &&
+      route.route !== "/pdf-viewer" &&
+      route.route !== "/pages/authentication/sign-in"
+  );
 
   //Consumir LOGING
 

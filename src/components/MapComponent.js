@@ -12,7 +12,7 @@ const createDivIcon = (icon) => {
   return divIcon({
     html: renderToString(icon),
     iconSize: [25, 25],
-    className: "custom-icon"
+    className: "custom-icon",
   });
 };
 
@@ -62,7 +62,11 @@ const MapComponent = () => {
   }
 
   return (
-    <MapContainer center={[19.432608, -99.133209]} zoom={13} style={{ height: "100vh", width: "100%" }}>
+    <MapContainer
+      center={[19.432608, -99.133209]}
+      zoom={13}
+      style={{ height: "100vh", width: "100%" }}
+    >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -75,8 +79,8 @@ const MapComponent = () => {
             location.level === "hospital"
               ? hospitalIcon
               : location.level === "clinic"
-                ? clinicIcon
-                : healthCenterIcon
+              ? clinicIcon
+              : healthCenterIcon
           }
         >
           <Popup>{location.name}</Popup>
