@@ -24,9 +24,12 @@ import routes from "routes";
 
 // Images
 import bgImage from "assets/images/SignInBAckG.jpeg";
+import AxiosCliente from "config/http-gateway/axios-config";
 
 function SignInBasic() {
   const [user, setUser] = useState({});
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const clientID = "652702201891-rc4scp0eeuht4jg0n8p7ttkfs29sajp5.apps.googleusercontent.com";
   useEffect(() => {
     const start = () => {
@@ -50,6 +53,24 @@ function SignInBasic() {
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
   const filteredRoutes = routes.filter((route) => route.route !== "/pages/authentication/sign-in");
+
+  //Consumir LOGING
+
+  const logIn = async () => {
+    try {
+      const response = await AxiosCliente({
+        url: "/api-alma/auth/signIn",
+        method: "PUT",
+        data: {
+          email: email,
+          password: password,
+        },
+      });
+      localStorage.setItem("user", JSON.stringify(response.data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <DefaultNavbar routes={filteredRoutes} transparent light />
@@ -91,10 +112,22 @@ function SignInBasic() {
               <MKBox pt={4} pb={3} px={3}>
                 <MKBox component="form" role="form">
                   <MKBox mb={2}>
-                    <MKInput type="email" label="Usuario" fullWidth />
+                    <MKInput
+                      type="email"
+                      label="Usuario"
+                      fullWidth
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="password" label="Contraseña" fullWidth />
+                    <MKInput
+                      type="password"
+                      label="Contraseña"
+                      fullWidth
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
                   </MKBox>
                   <MKBox display="flex" alignItems="center" ml={-1}>
                     <MKTypography
@@ -108,7 +141,7 @@ function SignInBasic() {
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={3} textAlign="center">
-                    <MKButton variant="gradient" color="info" fullWidth mb={2}>
+                    <MKButton variant="gradient" color="info" fullWidth mb={2} onClick={logIn}>
                       Iniciar sesión
                     </MKButton>
                   </MKBox>
