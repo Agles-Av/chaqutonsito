@@ -4,6 +4,7 @@ import SignIn from "layouts/pages/authentication/sign-in";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import Map from "layouts/pages/landing-pages/map";
 import PDFViewer from "./pages/Presentation/sections/PDFRender";
+import SimpleForm from "pages/LandingPages/SignIn/Register/SimpleForm";
 
 const routes = [
   {
@@ -28,6 +29,11 @@ const routes = [
     name: "pdf-viewer",
     route: "/pdf-viewer",
     component: <PDFViewer />,
+  },
+  {
+    name: "registro",
+    route: "/pages/SignIn/Register/SimpleForm",
+    component: <SimpleForm />,
   },
 ];
 
