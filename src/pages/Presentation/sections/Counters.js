@@ -34,16 +34,16 @@ function Counters() {
               count={170}
               suffix="+"
               title="Investigaciones"
-              description="From buttons, to inputs, navbars, alerts or cards, you are covered"
+              description="Las últmas investigaciones en avances médicos."
             />
           </Grid>
           <Grid item xs={12} md={6} display="flex">
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, mx: 0 }} />
             <DefaultCounterCard
-              count={15}
+              count={750}
               suffix="+"
-              title="Design Blocks"
-              description="Mix the sections, change the colors and unleash your creativity"
+              title="Especialistas"
+              description="Contamos con la confianza de los mejores especialistas."
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>

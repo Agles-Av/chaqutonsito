@@ -1,18 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -39,10 +24,9 @@ import { useLocation } from "react-router-dom";
 import bgImage from "assets/images/Reportes-clinicos.jpeg";
 
 function Presentation() {
-  const location = useLocation();
-  const currentRoute = location.pathname;
-  let filteredRoutes = routes.filter((route) => route.route !== currentRoute);
-  filteredRoutes = routes.filter((route) => route.route !== "/pages/authentication/sign-in");
+  const filteredRoutes = routes.filter(
+    (route) => route.route !== "/pages/authentication/sign-in" && route.route !== "/pdf-viewer"
+  );
 
   return (
     <>
@@ -50,8 +34,8 @@ function Presentation() {
         routes={filteredRoutes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "/pages/authentication/sign-in",
+          label: "Iniciar sesión",
           color: "info",
         }}
         sticky

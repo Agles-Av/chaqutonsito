@@ -23,7 +23,6 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
 import MapComponent from "components/MapComponent";
 import Typography from "@mui/material/Typography";
 
@@ -32,7 +31,6 @@ import Simbology from "pages/LandingPages/Map/sections/Simbology";
 
 // Routes
 import routes from "routes";
-import footerRoutes from "footer.routes";
 import { useLocation } from "react-router-dom";
 
 // Images
@@ -101,9 +99,6 @@ function AboutUs() {
         <Simbology />
         <MapComponent />
       </Card>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
     </>
   );
 }
