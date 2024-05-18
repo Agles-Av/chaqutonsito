@@ -9,7 +9,8 @@ function Test() {
     (route) => route.route !== "/pages/authentication/sign-in" && route.route !== "/pdf-viewer"
   );
 
-  const url = "https://archivos.juridicas.unam.mx/www/bjv/libros/10/4842/3.pdf";
+  const url =
+    "https://observatoriodiscapacidad.documenta.org.mx/wp-content/uploads/2020/10/INCyTU-Salud-Mental-en-Mexico.pdf";
 
   return (
     <>
