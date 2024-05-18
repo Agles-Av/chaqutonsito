@@ -5,7 +5,6 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import Map from "layouts/pages/landing-pages/map";
 import PDFViewer from "./pages/Presentation/sections/PDFRender";
 import SimpleForm from "pages/LandingPages/SignIn/Register/SimpleForm";
-
 const routes = [
   {
     name: "Informes clínicos",
