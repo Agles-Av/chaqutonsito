@@ -1,0 +1,21 @@
+.boton-cargar-informe {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-cargar-informe:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .boton-cargar-informe {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
