@@ -104,12 +104,12 @@ function SignInBasic() {
                       onClick={handleSetRememberMe}
                       sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
                     >
-                      &nbsp;&nbsp;Remember me
+                      &nbsp;&nbsp;
                     </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={3} textAlign="center">
                     <MKButton variant="gradient" color="info" fullWidth mb={2}>
-                      sign in
+                      Iniciar sesión
                     </MKButton>
                   </MKBox>
                   <MKBox textAlign="center">
