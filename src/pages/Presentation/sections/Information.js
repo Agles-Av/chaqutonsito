@@ -27,7 +27,7 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+import bgFront from "assets/images/pexels-pixabay-207601.jpg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 
 function Information() {
@@ -42,12 +42,12 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    Encuentra la clínica
                     <br />
-                    Material Kit
+                    más cercana
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="Localiza especialistas cerca de ti en cuestión de segundos."
               />
               <RotatingCardBack
                 image={bgBack}
@@ -76,22 +76,6 @@ function Information() {
                   icon="flip_to_front"
                   title="MUI Ready"
                   description="The world's most popular react components library for building user interfaces."
-                />
-              </Grid>
-            </Grid>
-            <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
                 />
               </Grid>
             </Grid>
