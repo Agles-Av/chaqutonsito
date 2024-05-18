@@ -1,21 +1,4 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// react-router-dom components
 import { Link } from "react-router-dom";
-import React from "react";
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -25,6 +8,7 @@ import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 import data from "pages/Presentation/sections/data/designBlocksData";
+import React from "react";
 
 function DesignBlocks() {
   const renderData = data.map(({ title, description, items }) => (
@@ -34,7 +18,7 @@ function DesignBlocks() {
           <MKTypography variant="h3" fontWeight="bold" mb={1}>
             {title}
           </MKTypography>
-          <MKTypography variant="body2" fontWeight="regular" color="secondary" mb={1} pr={2}>
+          <MKTypography variant="body2;" fontWeight="regular;" color="secondary;" mb={1} pr={2}>
             {description}
           </MKTypography>
         </MKBox>

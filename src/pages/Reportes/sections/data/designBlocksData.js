@@ -1,112 +1,169 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-const imagesPrefix =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/sections";
-
 export default [
   {
-    title: "Informes de historia",
-    description:
-      "Son documentos médicos" +
-      "que contienen información detallada sobre el historial de salud de un paciente." +
-      "Estos informes son esenciales para el seguimiento y la continuidad de la medicina.",
+    title: "Salud mental",
+    description: "Explora los últimos avances, estudios y consejos de expertos en salud mental.",
     items: [
       {
-        image: `${imagesPrefix}/headers.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Page Headers",
         count: 10,
-        route: "/sections/page-sections/page-headers",
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/features.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Features",
         count: 14,
-        route: "/sections/page-sections/features",
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/pricing.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Pricing",
         count: 8,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/faq.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "FAQ",
         count: 1,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/blogs.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Blog Posts",
         count: 11,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/testimonials.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Testimonials",
         count: 11,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/teams.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Teams",
         count: 6,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/stats.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Stats",
         count: 3,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/call-to-action.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Call to Actions",
         count: 8,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/projects.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Applications",
         count: 6,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/logo-area.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Logo Areas",
         count: 4,
-        pro: true,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/footers.jpg`,
+        image:
+          "https://imgv2-2-f.scribdassets.com/img/document/290767967/original/b205518ca6/1587127147?v=1",
         name: "Footers",
         count: 10,
-        pro: true,
+        route: "/pdf-viewer",
+      },
+    ],
+  },
+  {
+    title: "Avances médicos",
+    description: "Manténte informado sobre los avances médicos más recientes y prometedores.",
+    items: [
+      {
+        image:
+          "https://th.bing.com/th/id/R.b3897d43751c04105b0a52f0a776a830?rik=uKwgKi%2fq2izv6Q&pid=ImgRaw&r=0",
+        name: "Navbars",
+        count: 4,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/general-cards.jpg`,
-        name: "General Cards",
-        count: 9,
-        pro: true,
+        image:
+          "https://th.bing.com/th/id/R.b3897d43751c04105b0a52f0a776a830?rik=uKwgKi%2fq2izv6Q&pid=ImgRaw&r=0",
+        name: "Nav Tabs",
+        count: 2,
+        route: "/pdf-viewer",
       },
       {
-        image: `${imagesPrefix}/content-sections.jpg`,
-        name: "Content Sections",
+        image:
+          "https://th.bing.com/th/id/R.b3897d43751c04105b0a52f0a776a830?rik=uKwgKi%2fq2izv6Q&pid=ImgRaw&r=0",
+        name: "Pagination",
+        count: 3,
+        route: "/pdf-viewer",
+      },
+    ],
+  },
+  {
+    title: "Investigación científica",
+    description: "Explora las últimas tendencias y descubrimientos en investigación científica.",
+    items: [
+      {
+        image: "https://s2.studylib.es/store/data/008133234_1-f307abbc7762fdbc44b3c0c20777fe6b.png",
+        name: "Newsletters",
+        count: 6,
+        route: "/pdf-viewer",
+      },
+      {
+        image: "https://s2.studylib.es/store/data/008133234_1-f307abbc7762fdbc44b3c0c20777fe6b.png",
+        name: "Contact Sections",
         count: 8,
-        pro: true,
+        route: "/pdf-viewer",
+      },
+      {
+        image: "https://s2.studylib.es/store/data/008133234_1-f307abbc7762fdbc44b3c0c20777fe6b.png",
+        name: "Forms",
+        count: 3,
+        route: "/pdf-viewer",
+      },
+    ],
+  },
+  {
+    title: "Salud pública",
+    description: "Prevención, bienestar y seguridad para todos.",
+    items: [
+      {
+        image:
+          "https://www.aepcp.net/wp-content/uploads/2020/05/05.20003.Escudero-pdf-727x1024.jpg",
+        name: "Alerts",
+        count: 4,
+        route: "/pdf-viewer",
+      },
+      {
+        image:
+          "https://www.aepcp.net/wp-content/uploads/2020/05/05.20003.Escudero-pdf-727x1024.jpg",
+        name: "Notifications",
+        count: 3,
+        route: "/pdf-viewer",
+      },
+      {
+        image:
+          "https://www.aepcp.net/wp-content/uploads/2020/05/05.20003.Escudero-pdf-727x1024.jpg",
+        name: "Tooltips & Popovers",
+        count: 2,
+        route: "/pdf-viewer",
       },
     ],
   },

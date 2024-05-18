@@ -26,9 +26,12 @@ import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
+
 // Images
 import bgFront from "assets/images/pexels-pixabay-207601.jpg";
-import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import bgBack from "assets/images/pexels-karolina-grabowska-4021775.jpg";
 
 function Information() {
   return (
@@ -51,12 +54,12 @@ function Information() {
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Descubre especialistas"
+                description="Encuentra expertos locales de confianza para cualquier servicio cerca de tu hogar."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "/pages/landing-pages/map",
+                  label: "Buscar especialista",
                 }}
               />
             </RotatingCard>
@@ -65,17 +68,16 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  icon={<HealthAndSafetyIcon fontSize="2rem" />}
+                  title="Investigaciones actuales"
+                  description="Manténte al día con las últimas novedades en el sector salud."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  icon={<NewspaperIcon fontSize="2rem" />}
+                  title="Noticias relevantes"
+                  description="Consulta las noticias más relevantes y actuales."
                 />
               </Grid>
             </Grid>

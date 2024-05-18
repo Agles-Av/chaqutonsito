@@ -19,8 +19,9 @@ import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import routes from "routes";
 
 function Presentation() {
-  //ocultar la ruta de sign-in
-  const filteredRoutes = routes.filter((route) => route.route !== "/pages/authentication/sign-in");
+  const filteredRoutes = routes.filter(
+    (route) => route.route !== "/pages/authentication/sign-in" && route.route !== "/pdf-viewer"
+  );
   return (
     <>
       <DefaultNavbar
@@ -66,8 +67,8 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              Accede a servicios de salud confiables y cercanos. ¡Tu bienestar es nuestra priorid
+              ad!salud
             </MKTypography>
           </Grid>
         </Container>
