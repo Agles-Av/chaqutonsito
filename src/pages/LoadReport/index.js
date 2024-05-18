@@ -1,54 +1,31 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
+import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-
-// Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-
-// Presentation page sections
-
-// Presentation page components
-
-// Routes
-import routes from "routes";
-
-// Images
-import bgImage from "assets/images/Reportes-clinicos.jpeg";
-
-// Formulario
-
-import { useState } from "react";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import routes from "routes";
+import bgImage from "assets/images/Reportes-clinicos.jpeg";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 function Presentation() {
   const [errorMessage, setErrorMessage] = useState("");
-
   const [formData, setFormData] = useState({
     title: "",
     description: "",
     file: null,
   });
+
+  const navigate = useNavigate();
+
+  const fileData = {
+    title: formData.title,
+    description: formData.description,
+  };
 
   const isFilePdf = (file) => {
     return file && file.type === "application/pdf";
@@ -65,7 +42,6 @@ function Presentation() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validar el tipo de archivo
     if (!isFilePdf(formData.file)) {
       setErrorMessage("El archivo seleccionado no es un PDF válido");
       return;
@@ -73,26 +49,43 @@ function Presentation() {
       setErrorMessage("");
       try {
         const formDataObj = new FormData();
-        formDataObj.append("title", formData.title);
-        formDataObj.append("description", formData.description);
-        formDataObj.append("file", formData.file);
-
-        const response = await fetch("api-alma/file/upload", {
+        const fileDto = new Blob([JSON.stringify(fileData)], {
+          type: "application/json",
+        });
+        formDataObj.append("file", fileDto);
+        formDataObj.append("filePDF", formData.file);
+        const response = await fetch("http://localhost:8080/api-alma/file/upload", {
           method: "POST",
           body: formDataObj,
         });
 
         if (response.ok) {
-          console.log("Archivo enviado correctamente");
-          // Aquí puedes realizar acciones adicionales después de enviar el archivo
+          Swal.fire({
+            icon: "success",
+            title: "Éxito",
+            text: "Archivo enviado correctamente",
+          });
+          setTimeout(() => {
+            Swal.close(); // Cierra la alerta después de 3 segundos
+            navigate("/reportes"); // Cambia '/otra-url' por la ruta a la que deseas redirigir
+          }, 3000);
         } else {
-          console.error("Error al enviar el archivo");
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Error al enviar el archivo",
+          });
         }
       } catch (error) {
-        console.error("Error al enviar el archivo:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: `Error al enviar el archivo: ${error.message}`,
+        });
       }
     }
   };
+
   return (
     <>
       <DefaultNavbar
@@ -178,35 +171,45 @@ function Presentation() {
               </MKTypography>
             </MKBox>
           )}
-          <form onSubmit={handleSubmit} style={{ paddingLeft: 200, paddingRight: 200 }}>
-            <MKBox mb={2}>
-              <MKInput
-                label="Título"
-                name="title"
-                value={formData.title}
-                onChange={handleChange}
-                fullWidth
-              />
-            </MKBox>
-            <MKBox mb={2}>
-              <MKInput
-                label="Descripción"
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-                multiline
-                rows={4}
-                fullWidth
-              />
-            </MKBox>
-            <MKBox mb={4}>
-              <MKInput type="file" name="file" onChange={handleChange} accept=".pdf" fullWidth />
-            </MKBox>
-            <MKBox mt={4} mb={1} textAlign="center" ml={25} mr={25}>
-              <MKButton variant="gradient" color="info" type="submit" fullWidth>
-                Enviar
-              </MKButton>
-            </MKBox>
+          <form onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={8} mx="auto">
+                <MKBox mb={2}>
+                  <MKInput
+                    label="Título"
+                    name="title"
+                    value={formData.title}
+                    onChange={handleChange}
+                    fullWidth
+                  />
+                </MKBox>
+                <MKBox mb={2}>
+                  <MKInput
+                    label="Descripción"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleChange}
+                    multiline
+                    rows={4}
+                    fullWidth
+                  />
+                </MKBox>
+                <MKBox mb={4}>
+                  <MKInput
+                    type="file"
+                    name="file"
+                    onChange={handleChange}
+                    accept=".pdf"
+                    fullWidth
+                  />
+                </MKBox>
+                <MKBox mt={4} mb={1} md-ml={25} md-mr={25} textAlign="center">
+                  <MKButton variant="gradient" color="info" type="submit" fullWidth>
+                    Enviar
+                  </MKButton>
+                </MKBox>
+              </Grid>
+            </Grid>
           </form>
         </MKBox>
       </Card>

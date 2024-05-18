@@ -15,12 +15,11 @@ import Counters from "pages/Reportes/sections/Counters";
 import Information from "pages/Reportes/sections/Information";
 import DesignBlocks from "pages/Reportes/sections/DesignBlocks";
 import Testimonials from "pages/Reportes/sections/Testimonials";
-
 // Presentation page components
 
 // Routes
 import routes from "routes";
-
+import { useLocation } from "react-router-dom";
 // Images
 import bgImage from "assets/images/Reportes-clinicos.jpeg";
 
