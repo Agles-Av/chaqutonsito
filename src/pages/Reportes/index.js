@@ -30,20 +30,24 @@ import Counters from "pages/Reportes/sections/Counters";
 import Information from "pages/Reportes/sections/Information";
 import DesignBlocks from "pages/Reportes/sections/DesignBlocks";
 import Testimonials from "pages/Reportes/sections/Testimonials";
-
 // Presentation page components
 
 // Routes
 import routes from "routes";
-
+import { useLocation } from "react-router-dom";
 // Images
 import bgImage from "assets/images/Reportes-clinicos.jpeg";
 
 function Presentation() {
+  const location = useLocation();
+  const currentRoute = location.pathname;
+  let filteredRoutes = routes.filter((route) => route.route !== currentRoute);
+  filteredRoutes = routes.filter((route) => route.route !== "/pages/authentication/sign-in");
+
   return (
     <>
       <DefaultNavbar
-        routes={routes}
+        routes={filteredRoutes}
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/material-kit-react",
