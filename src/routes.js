@@ -1,14 +1,16 @@
+import FolderIcon from "@mui/icons-material/Folder";
+import Reportes from "./layouts/pages/reportes/index";
 import SignIn from "layouts/pages/authentication/sign-in";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
-import FolderIcon from "@mui/icons-material/Folder";
 import Map from "layouts/pages/landing-pages/map";
-import PDFRender from "pages/Presentation/sections/PDFRender";
+import PDFViewer from "./pages/Presentation/sections/PDFRender";
 
 const routes = [
   {
     name: "Informes clínicos",
     icon: <FolderIcon />,
-    href: "/reportes",
+    route: "/reportes",
+    component: <Reportes />,
   },
   {
     name: "Sign In",
@@ -23,10 +25,9 @@ const routes = [
     component: <Map />,
   },
   {
-    name: "test",
+    name: "pdf-viewer",
     route: "/pdf-viewer",
-    component: <PDFRender />,
-    hidden: true,
+    component: <PDFViewer />,
   },
 ];
 

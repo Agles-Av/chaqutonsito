@@ -68,7 +68,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Accede a servicios de salud confiables y cercanos. ¡Tu bienestar es nuestra prioridad!
+              Accede a servicios de salud confiables y cercanos. ¡Tu bienestar es nuestra prioridad!salud
             </MKTypography>
           </Grid>
         </Container>

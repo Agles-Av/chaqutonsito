@@ -40,14 +40,18 @@ import routes from "routes";
 import bgImage from "assets/images/Reportes-clinicos.jpeg";
 
 function Presentation() {
+  const filteredRoutes = routes.filter(
+    (route) => route.route !== "/pages/authentication/sign-in" && route.route !== "/pdf-viewer"
+  );
+
   return (
     <>
       <DefaultNavbar
-        routes={routes}
+        routes={filteredRoutes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "/pages/authentication/sign-in",
+          label: "Iniciar sesión",
           color: "info",
         }}
         sticky
