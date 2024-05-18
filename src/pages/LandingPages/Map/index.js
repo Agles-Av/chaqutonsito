@@ -33,24 +33,19 @@ import Simbology from "pages/LandingPages/Map/sections/Simbology";
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
+import { useLocation } from "react-router-dom";
 
 // Images
 import bgImage from "assets/images/thumb_3983_news_imgs_grande.jpeg";
 
 function AboutUs() {
+  const location = useLocation();
+  const currentRoute = location.pathname;
+  const filteredRoutes = routes.filter((route) => route.route !== currentRoute);
+
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
-          color: "default",
-        }}
-        transparent
-        light
-      />
+      <DefaultNavbar routes={filteredRoutes} transparent light />
       <MKBox
         minHeight="75vh"
         width="100%"

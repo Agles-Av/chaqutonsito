@@ -19,10 +19,12 @@ import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import routes from "routes";
 
 function Presentation() {
+  //ocultar la ruta de sign-in
+  const filteredRoutes = routes.filter((route) => route.route !== "/pages/authentication/sign-in");
   return (
     <>
       <DefaultNavbar
-        routes={routes}
+        routes={filteredRoutes}
         action={{
           type: "external",
           route: "/pages/authentication/sign-in",

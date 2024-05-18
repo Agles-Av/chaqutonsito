@@ -5,38 +5,22 @@ import Map from "layouts/pages/landing-pages/map";
 
 const routes = [
   {
-    name: "Clínicas cercanas",
-    icon: <LocalHospitalIcon />,
-    href: "https://www.github.com/creativetimofficial/material-kit-react",
-  },
-  {
     name: "Informes clínicos",
     icon: <FolderIcon />,
     href: "https://www.github.com/creativetimofficial/material-kit-react",
   },
   {
-    route: "/pages/authentication/sign-in",
-    component: <SignIn />,
-  },
-  {
-    name: "map",
-    route: "/pages/landing-pages/map",
-    component: <Map />,
-  },
-
-  {
     name: "Sign In",
     route: "/pages/authentication/sign-in",
     component: <SignIn />,
+    hidden: true,
   },
-
   {
-    name: "Map",
+    name: "Clínicas cercanas",
+    icon: <LocalHospitalIcon />,
     route: "/pages/landing-pages/map",
     component: <Map />,
   },
-
-
 ];
 
 export default routes;
