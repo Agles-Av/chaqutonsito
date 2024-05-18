@@ -19,7 +19,6 @@ import Testimonials from "pages/Reportes/sections/Testimonials";
 
 // Routes
 import routes from "routes";
-import { useLocation } from "react-router-dom";
 // Images
 import bgImage from "assets/images/Reportes-clinicos.jpeg";
 

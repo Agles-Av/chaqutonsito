@@ -19,7 +19,6 @@ import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import routes from "routes";
 
 function Presentation() {
-  //ocultar la ruta de sign-in
   const filteredRoutes = routes.filter(
     (route) => route.route !== "/pages/authentication/sign-in" && route.route !== "/pdf-viewer"
   );
@@ -68,7 +67,8 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Accede a servicios de salud confiables y cercanos. ¡Tu bienestar es nuestra prioridad!salud
+              Accede a servicios de salud confiables y cercanos. ¡Tu bienestar es nuestra priorid
+              ad!salud
             </MKTypography>
           </Grid>
         </Container>
