@@ -52,7 +52,8 @@ function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
-  const filteredRoutes = routes.filter((route) => route.route !== "/pages/authentication/sign-in");
+
+  const filteredAparteroutes = routes.filter((route) => route.route !== "/pages/SignIn/Register");
 
   //Consumir LOGING
 
@@ -73,7 +74,7 @@ function SignInBasic() {
   };
   return (
     <>
-      <DefaultNavbar routes={filteredRoutes} transparent light />
+      <DefaultNavbar routes={filteredAparteroutes} transparent light />
       <MKBox
         position="absolute"
         top={0}
@@ -159,7 +160,7 @@ function SignInBasic() {
                       No tienes una ceunta? {"   "}
                       <MKTypography
                         component={Link}
-                        to="/authentication/sign-up/cover"
+                        to="/pages/SignIn/Register/SimpleForm"
                         variant="button"
                         color="info"
                         fontWeight="medium"
