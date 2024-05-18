@@ -19,13 +19,13 @@ const imagesPrefix =
 export default [
   {
     title: "Salud mental",
-    description: "A selection of 45 page sections that fit perfectly in any combination",
+    description: "Explora los últimos avances, estudios y consejos de expertos en salud mental.",
     items: [
       {
         image: `${imagesPrefix}/headers.jpg`,
         name: "Page Headers",
         count: 10,
-        route: "/sections/page-sections/page-headers",
+        route: "/pdf-viewer",
       },
       {
         image: `${imagesPrefix}/features.jpg`,
@@ -97,7 +97,7 @@ export default [
   },
   {
     title: "Avances médicos",
-    description: "30+ components that will help go through the pages",
+    description: "Manténte informado sobre los avances médicos más recientes y prometedores.",
     items: [
       {
         image: `${imagesPrefix}/navbars.jpg`,
@@ -121,7 +121,7 @@ export default [
   },
   {
     title: "Investigación científica",
-    description: "50+ elements that you need for text manipulation and insertion",
+    description: "Explora las últimas tendencias y descubrimientos en investigación científica.",
     items: [
       {
         image: `${imagesPrefix}/newsletters.jpg`,
@@ -149,7 +149,7 @@ export default [
   },
   {
     title: "Salud pública",
-    description: "20+ Fully coded components that popup from different places of the screen",
+    description: "Prevención, bienestar y seguridad para todos.",
     items: [
       {
         image: `${imagesPrefix}/alerts.jpg`,
