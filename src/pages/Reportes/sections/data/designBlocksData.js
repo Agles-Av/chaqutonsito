@@ -28,7 +28,8 @@ export default [
         image: `${imagesPrefix}/headers.jpg`,
         name: "Page Headers",
         count: 10,
-        route: "/sections/page-sections/page-headers",
+        route:
+          "https://libroblancotdah.fundacioncadah.org/wp-content/uploads/MODELO-DE-INFORME-CLINICO.pdf",
       },
       {
         image: `${imagesPrefix}/features.jpg`,
