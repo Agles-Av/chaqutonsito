@@ -23,6 +23,20 @@ const routes = [
     route: "/pages/landing-pages/map",
     component: <Map />,
   },
+
+  {
+    name: "Sign In",
+    route: "/pages/authentication/sign-in",
+    component: <SignIn />,
+  },
+
+  {
+    name: "Map",
+    route: "/pages/landing-pages/map",
+    component: <Map />,
+  },
+
+
 ];
 
 export default routes;
