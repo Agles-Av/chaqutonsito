@@ -63,7 +63,7 @@ function Presentation() {
                 },
               })}
             >
-              Informes clinicos{" "}
+              Informes clínicos{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -72,7 +72,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Tu ventana a la informacion clinica.
+              Tu ventana a la información clínica.
             </MKTypography>
           </Grid>
         </Container>

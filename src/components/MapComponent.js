@@ -76,14 +76,16 @@ const MapComponent = () => {
           key={location.id}
           position={location.position}
           icon={
-            location.level === "hospital"
+            location.level === "tercero"
               ? hospitalIcon
-              : location.level === "clinic"
+              : location.level === "segundo"
               ? clinicIcon
               : healthCenterIcon
           }
         >
-          <Popup>{location.name}</Popup>
+          <Popup>
+            {location.name} <br /> {location.phone}
+          </Popup>
         </Marker>
       ))}
     </MapContainer>

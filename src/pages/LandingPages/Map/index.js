@@ -43,7 +43,7 @@ function AboutUs() {
 
   return (
     <>
-      <DefaultNavbar routes={filteredRoutes} transparent light />
+      <DefaultNavbar routes={filteredRoutes} sticky />
       <MKBox
         minHeight="75vh"
         width="100%"
@@ -80,6 +80,15 @@ function AboutUs() {
               })}
             >
               Encuentra los hospitales y clínicas
+            </MKTypography>
+            <MKTypography
+              variant="body1"
+              color="white"
+              textAlign="center"
+              px={{ xs: 6, lg: 12 }}
+              mt={1}
+            >
+              De acuerdo a tus necesidades y cercanía.
             </MKTypography>
           </Grid>
         </Container>

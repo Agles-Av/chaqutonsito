@@ -73,6 +73,8 @@ function SignInBasic() {
         },
       });
       localStorage.setItem("user", JSON.stringify(response.data));
+      //navegar a la pagina de inicio
+      window.location.href = "/presentacion";
     } catch (error) {
       console.log(error);
     }
